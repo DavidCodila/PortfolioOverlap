@@ -1,31 +1,26 @@
 namespace PortfolioOverlap.Tests;
 
 public class FundUnitTests
-{
+{   
+    private string mockFundName = "New Fund";
+    private List<string> mockFundStocks = new List<string>{
+        "Stock 1",
+        "Stock 2",
+        "Stock 3"
+    };  
+
     [Fact]
     public void setsFundName()
     {
-        string fundName = "New Fund";
-        List<string> fundStocks = new List<string>{
-            "Stock 1",
-            "Stock 2",
-            "Stock 3"
-        };
-        Fund sut = new(fundName,fundStocks);
-        Assert.Equal(fundName,sut.Name);
+        Fund sut = new(mockFundName,mockFundStocks);
+        Assert.Equal(mockFundName,sut.Name);
     }
 
     [Fact]
     public void setsFundStocks()
     {
-        string fundName = "New Fund";
-        List<string> fundStocks = new List<string>{
-            "Stock 1",
-            "Stock 2",
-            "Stock 3"
-        };
-        Fund sut = new(fundName,fundStocks);
-        Assert.Equal(fundStocks,sut.Stocks);
+        Fund sut = new(mockFundName,mockFundStocks);
+        Assert.Equal(mockFundStocks,sut.Stocks);
     }
 
 }
