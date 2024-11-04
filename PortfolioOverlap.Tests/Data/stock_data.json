@@ -15,14 +15,6 @@
                 "STOCK 3",
                 "STOCK 4"
             ]
-        },
-        {
-            "name": "FUND_2",
-            "stocks": [
-                "STOCK 1",
-                "STOCK 2",
-                "STOCK 4"
-            ]
         }
     ]
 }
