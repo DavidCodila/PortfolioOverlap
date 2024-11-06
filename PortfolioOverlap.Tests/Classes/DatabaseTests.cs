@@ -31,9 +31,8 @@ namespace PortfolioOverlap.Tests.Classes
         {   
             Database sut = new();
             sut.LoadFunds(fileName);
-            Assert.Equal(MOCK_FUNDS,sut.Funds.funds);
+            Assert.Equivalent(MOCK_FUNDS,sut.Funds.funds, strict:true);
         }
-
 
     }
 }
