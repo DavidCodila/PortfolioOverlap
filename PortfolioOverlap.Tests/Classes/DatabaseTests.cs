@@ -6,8 +6,8 @@ namespace PortfolioOverlap.Tests.Classes
     public class DatabaseTests
     {
         private static readonly string fileName = @"Data\stock_data.json";
-        private static readonly string Fund_1_Name = "Fund 1";
-        private static readonly string Fund_2_Name = "Fund 2";
+        private static readonly string Fund_1_Name = "FUND_1";
+        private static readonly string Fund_2_Name = "FUND_2";
         private static readonly List<string> MOCK_FUND_STOCKS_1 = [
             "STOCK 1",
             "STOCK 2",
@@ -31,7 +31,7 @@ namespace PortfolioOverlap.Tests.Classes
         {   
             Database sut = new();
             sut.LoadFunds(fileName);
-            Assert.Equal(MOCK_FUNDS,sut.Funds.FundList);
+            Assert.Equal(MOCK_FUNDS,sut.Funds.funds);
         }
 
 
