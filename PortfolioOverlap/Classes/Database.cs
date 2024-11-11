@@ -13,7 +13,7 @@ namespace PortfolioOverlap.Classes
             Funds = JsonConvert.DeserializeObject<Funds>(text) ?? throw new NullReferenceException();
         }
         public Fund GetFund(string name) {
-            return new Fund();
+            return Funds.FundList.FirstOrDefault(f => f.Name == name) ?? throw new NullReferenceException();
         }
     }
 }
