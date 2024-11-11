@@ -10,8 +10,10 @@ namespace PortfolioOverlap.Classes
             string projectDirectory = Directory.GetParent(Directory.GetCurrentDirectory())?.Parent?.Parent?.FullName ?? throw new NullReferenceException();
             string filePath = Path.Combine(projectDirectory, fileName);
             string text = File.ReadAllText(filePath);
-            Console.WriteLine(text);
             Funds = JsonConvert.DeserializeObject<Funds>(text) ?? throw new NullReferenceException();
+        }
+        public Fund GetFund(string name) {
+            return new Fund();
         }
     }
 }
