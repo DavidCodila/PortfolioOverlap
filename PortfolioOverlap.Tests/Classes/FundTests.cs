@@ -26,7 +26,7 @@ public class FundTests
     }
 
     private Fund CreateDefaultFund() {
-        return new Fund(MOCK_FUND_NAME,MOCK_FUND_STOCKS);
+        return Fund.GenerateFundWithNameAndStocks(MOCK_FUND_NAME,MOCK_FUND_STOCKS);
     }
 
 }

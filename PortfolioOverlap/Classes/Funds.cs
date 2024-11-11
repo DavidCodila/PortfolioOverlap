@@ -1,7 +1,14 @@
+using Newtonsoft.Json;
+
 namespace PortfolioOverlap.Classes {
 
     public class Funds {
-        //public string name { get; set; }
-        public List<Fund> funds { get; set; }
+        [JsonProperty("funds")]
+        public List<Fund> FundList { get; set; }
+
+        public Funds()
+        {
+            FundList = [];
+        }
     }
 }
