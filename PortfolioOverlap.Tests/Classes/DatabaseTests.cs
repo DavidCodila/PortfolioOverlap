@@ -15,8 +15,6 @@ namespace PortfolioOverlap.Tests.Classes
         private Fund Fund_2 = new();
         private Funds MOCK_FUNDS = new();
 
-        //private Database MockDatabase = new();
-
         public DatabaseTests() {
             Initalise();
         }
