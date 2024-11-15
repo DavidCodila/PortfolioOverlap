@@ -43,9 +43,9 @@ namespace PortfolioOverlap.Tests.Classes {
 
         [Fact]
         public void CalculateOverlap() {
-            Assert.Equal(50.00f,Calculator.CalculateOverlap(Fund_1,Fund_2));
-            Assert.Equal(85.71f,Calculator.CalculateOverlap(Fund_2,Fund_3));
-            Assert.Equal(57.14f,Calculator.CalculateOverlap(Fund_3,Fund_1));
+            Assert.Equal(50.00d,Calculator.CalculateOverlap(Fund_1,Fund_2));
+            Assert.Equal(85.71d,Calculator.CalculateOverlap(Fund_2,Fund_3));
+            Assert.Equal(57.14d,Calculator.CalculateOverlap(Fund_3,Fund_1));
         }
     }
 }
