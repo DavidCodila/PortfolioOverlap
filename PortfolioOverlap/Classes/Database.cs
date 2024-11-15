@@ -7,10 +7,8 @@ namespace PortfolioOverlap.Classes
         public Funds Funds { get; set; }
         public Database() => Funds = new Funds();
         public void LoadFunds(string fileName) {
-            string projectDirectory = Directory.GetParent(Directory.GetCurrentDirectory())?.Parent?.Parent?.FullName ?? throw new NullReferenceException();
-            string filePath = Path.Combine(projectDirectory, fileName);
-            string text = File.ReadAllText(filePath);
-            Funds = JsonConvert.DeserializeObject<Funds>(text) ?? throw new NullReferenceException();
+            string stock_data = FileReader.ReadFile(fileName);
+            Funds = JsonConvert.DeserializeObject<Funds>(stock_data) ?? throw new NullReferenceException();
         }
         public Fund GetFund(string name) {
             return Funds.FundList.FirstOrDefault(f => f.Name == name) ?? throw new NullReferenceException();
